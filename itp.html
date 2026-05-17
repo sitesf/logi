@@ -490,65 +490,7 @@
         font-size:28px;
       }
     }
-  
-
-    /* Legal footer + cookie banner */
-    .legal-footer {
-      width: 100%;
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      line-height: 1.65;
-    }
-    .legal-footer strong { color: rgba(255,255,255,.92); }
-    .legal-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      margin-top: 10px;
-    }
-    .legal-links a {
-      color: rgba(255,255,255,.78);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .legal-links a:hover { color: #fff; }
-    .cookie-box {
-      position: fixed;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      background: rgba(22,22,22,.96);
-      box-shadow: 0 20px 60px rgba(0,0,0,.45);
-      color: #fff;
-      display: none;
-    }
-    .cookie-box.show { display: block; }
-    .cookie-box p { margin: 6px 0 12px; color: rgba(255,255,255,.78); line-height: 1.5; }
-    .cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .cookie-actions button, .cookie-actions a {
-      border: 0;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-weight: 800;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .cookie-accept { background: #22c55e; color: #0b120d; }
-    .cookie-reject { background: rgba(255,255,255,.12); color: #fff; }
-    .cookie-more { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.2) !important; }
-
   </style>
-  <link rel="canonical" href="https://www.logistikspeedcurier.ro/itp.html" />
 </head>
 <body>
 
@@ -556,7 +498,7 @@
     <div class="container">
       <nav class="nav">
         <a class="brand" href="index.html" aria-label="Logistik Speed Curier">
-          <img class="brand-logo" src="images/nealegipenoi.png" alt="Logistik Speed Curier">
+          <img class="brand-logo" src="nealegipenoi.png" alt="Logistik Speed Curier">
           <div>
             <span class="brand-name">Logistik Speed Curier</span>
             <span class="brand-sub">Service Auto, Diagnoza, Mecanica, Statie ITP</span>
@@ -570,7 +512,7 @@
           <a href="itp.html">ITP</a>
         </div>
 
-        <a class="nav-cta" href="tel:0720200300">Apeleaza acum</a>
+        <a class="nav-cta" href="tel:0766799157">Apeleaza acum</a>
       </nav>
     </div>
   </header>
@@ -710,8 +652,8 @@
           <h2>Programeaza-te pentru statia ITP</h2>
 
           <div class="hero-actions" style="justify-content:center;">
-            <a href="tel:0720200300" class="btn btn-primary">Apeleaza acum</a>
-            <a href="https://wa.me/40720200300?text=Buna%20ziua,%20as%20dori%20o%20programare%20pentru%20ITP." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+            <a href="tel:0766799157" class="btn btn-primary">Apeleaza acum</a>
+            <a href="https://wa.me/40766799157?text=Buna%20ziua,%20as%20dori%20o%20programare%20pentru%20ITP." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
             <a href="https://waze.com/ul?q=Logistik%20Speed%20Curier%20Bd.%20Timisoara%2092%20Sector%206%20Bucuresti" target="_blank" rel="noopener" class="btn btn-waze">Navigheaza cu Waze</a>
             <a href="index.html#contact" class="btn btn-secondary">Vezi datele de contact</a>
           </div>
@@ -732,45 +674,7 @@
         </div>
       </div>
     </div>
-      <div class="legal-footer">
-        <div><strong>Operator:</strong> LOGISTIK SPEED CURIER, CUI 21970957, Nr. Reg. Com. J2007011967401, sediu social: Prel. Ghencea 28 Bl. C5 Sc. A Et. 9 Ap. 34, Cod 061711, Sector 6, Bucuresti.</div>
-        <div><strong>Contact:</strong> <a href="tel:0720200300">0720 200 300</a> · <a href="mailto:contact@logistik.ro">contact@logistik.ro</a> · Program: 09:00-18:00.</div>
-        <div class="legal-links">
-          <a href="termeni-conditii.html">Termeni si conditii</a>
-          <a href="politica-confidentialitate.html">Politica de confidentialitate</a>
-          <a href="politica-cookies.html">Politica cookies</a>
-          <a href="gdpr.html">Drepturi GDPR</a>
-          <a href="https://anpc.ro/" target="_blank" rel="noopener">ANPC</a>
-          <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">SOL</a>
-        </div>
-      </div>
-
   </footer>
-  <div class="cookie-box" id="cookieBox" role="dialog" aria-live="polite" aria-label="Setari cookies">
-    <strong>Setari cookies</strong>
-    <p>Folosim cookies necesare pentru functionarea site-ului. Cookies pentru analiza, marketing sau platforme externe se folosesc doar dupa acordul tau, daca vor fi activate pe site.</p>
-    <div class="cookie-actions">
-      <button class="cookie-accept" type="button" data-cookie="accept">Accept</button>
-      <button class="cookie-reject" type="button" data-cookie="reject">Refuz</button>
-      <a class="cookie-more" href="politica-cookies.html">Afla mai mult</a>
-    </div>
-  </div>
-
-  <script>
-    (function(){
-      var box = document.getElementById('cookieBox');
-      if(!box) return;
-      var saved = localStorage.getItem('logistik_cookie_consent');
-      if(!saved) box.classList.add('show');
-      document.querySelectorAll('[data-cookie]').forEach(function(btn){
-        btn.addEventListener('click', function(){
-          localStorage.setItem('logistik_cookie_consent', btn.getAttribute('data-cookie'));
-          box.classList.remove('show');
-        });
-      });
-    })();
-  </script>
-
 
 </body>
 </html>
