@@ -6,861 +6,94 @@
        ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logistik Speed Curier | Service Auto Bucuresti</title>
-    <meta property="og:type" content="website" />
+  <title>Service Auto Bucuresti Sector 6 | Mecanica, ITP, Vopsitorie - Logistik Speed Curier</title>
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.logistikspeedcurier.ro/" />
-  <meta property="og:title" content="Logistik Speed Curier | Service Auto Bucuresti Sector 6" />
-  <meta property="og:description" content="Service auto complet in Bucuresti, Sector 6 — mecanica, diagnoza, ITP, tinichigerie, vopsitorie, vulcanizare. Programari rapide." />
+  <meta property="og:title" content="Service Auto Complet Bucuresti Sector 6 | Logistik Speed Curier" />
+  <meta property="og:description" content="Service auto complet in Bucuresti Sector 6: mecanica, diagnoza, ITP, tinichigerie, vopsitorie, vulcanizare. Programari rapide prin telefon sau WhatsApp." />
   <meta property="og:image" content="https://www.logistikspeedcurier.ro/images/og-logistik.jpg" />
   <meta property="og:locale" content="ro_RO" />
-  <meta name="description" content="Service auto complet in Bucuresti, Sector 6. Mecanica, diagnoza, ITP, tinichigerie, vopsitorie si vulcanizare. Programare rapida prin WhatsApp." />
+  <meta name="description" content="Service auto complet in Bucuresti, Sector 6: mecanica generala, diagnoza computerizata, ITP, tinichigerie, vopsitorie si vulcanizare. Programare rapida prin WhatsApp. Bd. Timisoara 92." />
 
-  <!-- ============================================================
-       FONTURI GOOGLE
-       ============================================================ -->
+  <!-- NOTE: Fonturi Google – de self-hosted pentru conformitate GDPR stricta.
+       Fisiere necesare: Inter (400,500,600,700,800) + Rajdhani (600,700)
+       Descarca de la: https://fonts.google.com/
+       Adauga @font-face in style.css si inlocuieste linkul de mai jos. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 
-  <style>
-
-    /* ============================================================
-       VARIABILE CSS GLOBALE
-       Toate culorile, umbrele si razele folosite in pagina
-       ============================================================ */
-    :root {
-      --bg:          #262626;
-      --bg-soft:     #2f2f2f;
-      --panel:       #353535;
-      --panel-2:     #3d3d3d;
-      --line:        #4b4b4b;
-      --line-soft:   rgba(255,255,255,.10);
-      --text:        #f3f5f7;
-      --muted:       #c4c8cf;
-      --muted-2:     #9aa1ab;
-      --accent:      #ef4444;
-      --accent-soft: rgba(239,68,68,.16);
-      --shadow:      0 18px 50px rgba(0,0,0,.30);
-      --radius:      24px;
-      --container:   min(1180px, calc(100vw - 40px));
-    }
-
-    /* ============================================================
-       RESET DE BAZA
-       ============================================================ */
-    * { box-sizing: border-box; }
-
-    html, body {
-      min-height: 100%;
-      width: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(239,68,68,.08), transparent 18%),
-        linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
-      -webkit-text-size-adjust: 100%;
-      text-rendering: optimizeLegibility;
-    }
-
-    /* ============================================================
-       FUNDAL GRILA (efect vizual decorativ)
-       ============================================================ */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
-      background-size: 56px 56px;
-      opacity: .45;
-      z-index: 0;
-    }
-
-    /* ============================================================
-       IMAGINI RESPONSIVE GLOBAL
-       Orice poza adaugata in pagina se scaleza automat pe orice ecran.
-       Nu este nevoie de setari suplimentare — regula se aplica automat.
-       ============================================================ */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ============================================================
-       UTILITARE GENERALE
-       ============================================================ */
-    .container {
-      width: var(--container);
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .section { padding: 36px 0; }
-
-    /* ============================================================
-       KICKER (eticheta mica deasupra titlurilor)
-       ============================================================ */
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(239,68,68,.28);
-      background: rgba(239,68,68,.08);
-      color: #ff8a8a;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-weight: 700;
-    }
-
-    /* ============================================================
-       ANTET SECTIUNE (titlu + paragraf)
-       ============================================================ */
-    .section-head {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 24px;
-      align-items: end;
-      margin-bottom: 16px;
-    }
-
-    .section-head h2 {
-      margin: 10px 0 0;
-      font-size: clamp(24px, 4vw, 34px);
-      line-height: 1;
-      font-family: 'Rajdhani', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: .02em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
-      max-width: 560px;
-      justify-self: end;
-    }
-
-    /* ============================================================
-       NAVBAR — BARA DE NAVIGARE FIXA
-       Ramane vizibila la scroll, cu efect de blur
-       ============================================================ */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(24,24,24,.84);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    /* ============================================================
-       BRAND (logo + nume firma in navbar)
-       ============================================================ */
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: var(--text);
-      min-width: 0;
-    }
-
-    .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      padding: 4px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid var(--line-soft);
-      flex: 0 0 auto;
-      object-fit: contain;
-    }
-
-    .brand-name {
-      display: block;
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: .02em;
-    }
-
-    .brand-sub {
-      display: block;
-      color: var(--muted-2);
-      font-size: 12px;
-      margin-top: 3px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 320px;
-    }
-
-    /* ============================================================
-       LINKURI NAVIGARE DESKTOP
-       Vizibile implicit; ascunse in media query mobil
-       ============================================================ */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
-    /* ============================================================
-       BUTON CTA NAVBAR (Suna acum)
-       Vizibil pe desktop; ascuns pe mobil
-       ============================================================ */
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      box-shadow: 0 10px 26px rgba(239,68,68,.22);
-    }
-
-    /* ============================================================
-       BUTON HAMBURGER
-       Ascuns implicit (display:none).
-       FIX MOBIL: activat in @media (max-width:640px) de mai jos.
-       ============================================================ */
-    .menu-btn {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      border: 1px solid var(--line-soft);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    /* ============================================================
-       MENIU MOBIL DROPDOWN
-       Se deschide la click pe hamburger prin clasa .open
-       ============================================================ */
-    .mobile-menu {
-      display: none;
-      padding: 0 0 18px;
-      gap: 10px;
-      flex-direction: column;
-    }
-
-    .mobile-menu a {
-      text-decoration: none;
-      color: var(--muted);
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--line-soft);
-      padding: 14px 16px;
-      border-radius: 16px;
-      font-weight: 600;
-      font-size: 13px;
-    }
-
-    .mobile-menu.open { display: flex; }
-
-    /* ============================================================
-       SECTIUNEA HERO
-       ============================================================ */
-    .hero { padding: 44px 0 34px; }
-
-    .hero-banner {
-      width: 100%;
-      border-radius: 26px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.06);
-      margin-bottom: 28px;
-      background: linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
-      box-shadow: var(--shadow);
-    }
-
-    .hero-banner-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 10px;
-      border-radius: 26px;
-      border: 0;
-      background: transparent;
-      box-shadow: none;
-    }
-
-    /* ============================================================
-       IMAGINE BANNER HERO
-       width:100% => se intinde pe toata latimea
-       height:auto => proportii corecte pe orice ecran
-       ============================================================ */
-    .hero-banner-title img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: none;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 20px;
-      background: #242424;
-    }
-
-    /* ============================================================
-       GRID HERO (doua coloane pe desktop)
-       ============================================================ */
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.02fr .98fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    /* ============================================================
-       CARDURI COMUNE
-       ============================================================ */
-    .hero-copy, .hero-media,
-    .service, .panel, .faq-item, .contact-card, .gallery-card, .map-wrap {
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-copy, .hero-media,
-    .service, .panel, .faq-item, .contact-card {
-      background: linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
-    }
-
-    .hero-copy, .hero-media { border-radius: 32px; }
-
-    /* ============================================================
-       COLOANA TEXT HERO (stanga)
-       ============================================================ */
-    .hero-copy {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero-copy h1 {
-      margin: 8px 0 10px;
-      font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(30px, 5vw, 52px);
-      line-height: .95;
-      text-transform: uppercase;
-      letter-spacing: .02em;
-    }
-
-    .hero-copy h1 span {
-      color: #b4bbc4;
-      display: block;
-      font-size: clamp(18px, 2.8vw, 24px);
-      margin-top: 8px;
-    }
-
-    .hero-copy p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.65;
-      color: var(--muted);
-      max-width: 560px;
-    }
-
-    /* ============================================================
-       BUTOANE ACTIUNE
-       ============================================================ */
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-      width: 100%;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 9px 15px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 13px;
-      border: 1px solid transparent;
-      transition: .2s ease;
-      min-height: 40px;
-      color: #fff;
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary   { background: var(--accent); color: #fff; box-shadow: 0 12px 28px rgba(239,68,68,.24); }
-    .btn-secondary { background: rgba(255,255,255,.04); color: var(--text); border-color: var(--line-soft); }
-    .btn-whatsapp  { background: #22c55e; color: #fff; }
-    .btn-location  { background: #f43f5e; color: #fff; }
-    .btn-waze      { background: #38bdf8; color: #fff; }
-    .btn-review    { background: #3b82f6; color: #fff; }
-
-    /* ============================================================
-       COLOANA MEDIA HERO (dreapta — imagine + statistici)
-       ============================================================ */
-    .hero-media {
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    /* ============================================================
-       IMAGINE PRINCIPALA HERO
-       min-height pe desktop; se adapteaza automat pe mobil
-       ============================================================ */
-    .hero-shot {
-      border-radius: 26px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.06);
-      min-height: 430px;
-      background: #242424;
-      flex: 1;
-    }
-
-    .hero-shot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* ============================================================
-       STATISTICI HERO (3 carduri mici)
-       ============================================================ */
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .meta-card, .hero-point, .trust-card, .check, .contact-item {
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--line-soft);
-    }
-
-    .meta-card { padding: 18px 16px; border-radius: 20px; }
-    .meta-card strong { display: block; font-size: 24px; font-family: 'Rajdhani',sans-serif; margin-bottom: 4px; line-height: 1; }
-    .meta-card span   { color: var(--muted); font-size: 12.5px; line-height: 1.6; }
-
-    /* ============================================================
-       SECTIUNEA TRUST (4 carduri avantaje)
-       ============================================================ */
-    .trust { padding-top: 20px; }
-
-    .trust-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .trust-card { padding: 20px 18px; border-radius: 22px; }
-    .trust-card strong { display: block; font-size: 17px; margin-bottom: 8px; line-height: 1.15; }
-    .trust-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 13px; }
-
-    /* ============================================================
-       GRID SERVICII (3 coloane desktop)
-       ============================================================ */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .service { padding: 20px; border-radius: 24px; }
-    .service h3 { margin: 0 0 8px; font-size: 21px; line-height: 1; font-family: 'Rajdhani',sans-serif; text-transform: uppercase; letter-spacing: .02em; }
-    .service p  { margin: 0; color: var(--muted); line-height: 1.65; font-size: 13px; }
-
-    /* ============================================================
-       SECTIUNEA SPLIT (avantaje + imagine)
-       ============================================================ */
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .panel { padding: 22px; border-radius: 28px; }
-    .check-list { display: grid; gap: 12px; margin-top: 16px; }
-
-    .check {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 12px 14px;
-      border-radius: 18px;
-    }
-
-    .check strong { display: block; margin-bottom: 4px; font-size: 14px; line-height: 1.25; }
-    .check p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
-
-    /* ============================================================
-       PANEL VIZUAL (imagine dreapta in sectiunea avantaje)
-       Imaginea se scaleza automat la orice dimensiune
-       ============================================================ */
-    .panel-visual { overflow: hidden; padding: 0; }
-    .panel-visual img {
-      width: 96%;
-      height: 96%;
-      object-fit: cover;
-      margin: 2%;
-      border-radius: 22px;
-    }
-
-    /* ============================================================
-       SECTIUNEA FAQ (3 coloane)
-       ============================================================ */
-    .faq { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .faq-item { padding: 18px; border-radius: 24px; }
-    .faq-item h3 { margin: 0 0 8px; font-size: 21px; font-family: 'Rajdhani',sans-serif; text-transform: uppercase; }
-    .faq-item p  { margin: 0; color: var(--muted); line-height: 1.6; font-size: 13px; }
-
-    /* ============================================================
-       SECTIUNEA CONTACT (doua coloane)
-       ============================================================ */
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 22px;
-    }
-
-    .contact-card { padding: 22px; border-radius: 28px; }
-    .contact-list { display: grid; gap: 10px; margin-top: 16px; }
-
-    .contact-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 12px 14px;
-      border-radius: 18px;
-    }
-
-    .contact-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; background: var(--accent-soft); flex: 0 0 auto; }
-    .contact-item small  { display: block; color: var(--muted-2); text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 800; margin-bottom: 6px; }
-    .contact-item strong,
-    .contact-item a      { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 700; line-height: 1.2; }
-    .contact-item p      { margin: 0; color: var(--muted); line-height: 1.55; font-size: 12.5px; }
-
-    /* ============================================================
-       HARTA GOOGLE MAPS
-       ============================================================ */
-    .map-wrap { border-radius: 28px; overflow: hidden; background: #242424; }
-    .map-wrap iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 540px;
-      border: 0;
-      filter: grayscale(1) contrast(1.04) brightness(.9);
-    }
-
-    /* ============================================================
-       GALERIE (3 coloane desktop)
-       ============================================================ */
-    #galerie .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 20px 0;
-    }
-
-    #galerie .gallery-grid > a { display: block; text-decoration: none; color: inherit; }
-
-    /* ============================================================
-       CARD GALERIE
-       height:300px => inaltime fixa pe desktop
-       Imaginea umple cardul cu object-fit:cover
-       ============================================================ */
-    #galerie .gallery-card {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-      border-radius: 26px;
-      padding: 10px;
-      background: linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    #galerie .gallery-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      border-radius: 18px;
-      transition: transform .3s ease;
-    }
-
-    #galerie .gallery-card:hover img { transform: scale(1.035); }
-
-    /* ANIMATIE LINKURI / CARDURI CLICKABILE */
-a,
-button,
-.btn,
-.nav-links a,
-.mobile-menu a,
-.brand,
-.service,
-.trust-card,
-.faq-item,
-.contact-item,
-#galerie .gallery-grid > a,
-#galerie .gallery-card {
-  transition:
-    transform .22s ease,
-    box-shadow .22s ease,
-    border-color .22s ease,
-    background .22s ease,
-    color .22s ease;
-}
-
-a:hover,
-button:hover,
-.btn:hover,
-.nav-links a:hover,
-.mobile-menu a:hover,
-.brand:hover,
-.service:hover,
-.trust-card:hover,
-.faq-item:hover,
-.contact-item:hover,
-#galerie .gallery-grid > a:hover .gallery-card {
-  transform: translateY(-5px);
-  box-shadow: 0 22px 55px rgba(0,0,0,.42);
-  border-color: rgba(239,68,68,.45);
-}
-
-.btn:hover,
-.nav-cta:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 16px 34px rgba(239,68,68,.34);
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
-
-#galerie .gallery-grid > a:hover .gallery-card img {
-  transform: scale(1.110);
-}
-
-    /* ============================================================
-       FOOTER
-       ============================================================ */
-    .footer {
-      padding: 26px 0 96px;
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
-
-    .footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px; }
-    .footer small { color: var(--muted-2); font-size: 13px; }
-
-    /* ============================================================
-       ANIMATII REVEAL (elemente apar la scroll)
-       ============================================================ */
-    .reveal { opacity: 1; transform: none; }
-    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
-    .js .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ============================================================
-       MEDIA QUERY — TABLETA (max 1100px)
-       Coloanele trec la un singur rand
-       ============================================================ */
-    @media (max-width: 1100px) {
-      .hero-grid, .split, .contact-wrap, .section-head {
-        grid-template-columns: 1fr;
-      }
-      .section-head p { justify-self: start; }
-      .trust-row, .hero-points, .faq { grid-template-columns: repeat(2, 1fr); }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .map-wrap iframe { min-height: 420px; }
-      #galerie .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      #galerie .gallery-card { height: 280px; }
-    }
-
-    /* ============================================================
-       MEDIA QUERY — MOBIL (max 640px)
-
-       FIX PRINCIPAL NAVBAR:
-         - .nav-links si .nav-cta => ascunse (display:none)
-         - .menu-btn => activat (display:flex)
-
-       Fara acest fix, linkurile desktop apareau inghesuie
-       pe mobil in loc de hamburger.
-       ============================================================ */
-    @media (max-width: 640px) {
-
-      /* FIX: ascunde linkurile desktop pe mobil */
-      .nav-links,
-      .nav-cta { display: none; }
-
-      /* FIX: afiseaza butonul hamburger pe mobil */
-      .menu-btn { display: flex; }
-
-      /* Container mai ingust */
-      .container { width: min(100vw - 24px, 1180px); }
-
-      /* Hero */
-      .hero { padding-top: 24px; }
-      .hero-copy h1 { font-size: 34px; }
-      .hero-copy p  { font-size: 14px; }
-
-      /* Butoanele ocupa toata latimea pe mobil */
-      .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
-      .hero-actions .btn { width: 100%; max-width: 100%; justify-content: center; }
-      .btn { width: 100%; }
-
-      /* Raze mai mici pe ecrane mici */
-      .hero-copy, .hero-media, .panel, .contact-card,
-      .faq-item, .service, .trust-card { border-radius: 24px; }
-
-      /* Footer cu spatiu pentru bara fixa de jos */
-      .footer { padding-bottom: 110px; }
-
-      /* Fara grila de fundal pe mobil (performanta) */
-      body::before { display: none; }
-
-      /* Navbar solid pe mobil */
-      .topbar {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        background: rgba(24,24,24,.96);
-      }
-
-      /* Imagine hero pe mobil */
-      .hero-shot { min-height: 220px; }
-      .hero-shot img, .panel-visual img { height: auto; min-height: 0; }
-
-      /* Harta mai mica pe mobil */
-      .map-wrap iframe { min-height: 320px; }
-
-      /* Banner hero pe mobil */
-      .hero-banner { padding: 8px; border-radius: 22px; }
-      .hero-banner-title { padding: 0; height: auto; min-height: 0; }
-      .hero-banner-title img {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 18px;
-      }
-
-      /* Galerie 1 coloana pe mobil */
-      #galerie .gallery-grid { grid-template-columns: 1fr; gap: 18px; padding: 14px 0; }
-      #galerie .gallery-card { height: 240px; border-radius: 22px; }
-      #galerie .gallery-card img { border-radius: 22px; }
-    }
-
-  
-
-    /* Legal footer + cookie banner */
-    .legal-footer {
-      width: 100%;
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(255,255,255,.72);
-      font-size: 13px;
-      line-height: 1.65;
-    }
-    .legal-footer strong { color: rgba(255,255,255,.92); }
-    .legal-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      margin-top: 10px;
-    }
-    .legal-links a {
-      color: rgba(255,255,255,.78);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .legal-links a:hover { color: #fff; }
-    .cookie-box {
-      position: fixed;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      background: rgba(22,22,22,.96);
-      box-shadow: 0 20px 60px rgba(0,0,0,.45);
-      color: #fff;
-      display: none;
-    }
-    .cookie-box.show { display: block; }
-    .cookie-box p { margin: 6px 0 12px; color: rgba(255,255,255,.78); line-height: 1.5; }
-    .cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .cookie-actions button, .cookie-actions a {
-      border: 0;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-weight: 800;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .cookie-accept { background: #22c55e; color: #0b120d; }
-    .cookie-reject { background: rgba(255,255,255,.12); color: #fff; }
-    .cookie-more { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.2) !important; }
-
-  </style>
   <link rel="canonical" href="https://www.logistikspeedcurier.ro/" />
+
+  <!-- Google Analytics 4 placeholder — decomentati si inlocuiti G-XXXXXXXX cu ID-ul real
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXX');
+  </script>
+  -->
+
+  <!-- Schema.org JSON-LD — LocalBusiness / AutoRepair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["AutoRepair", "LocalBusiness"],
+    "name": "Logistik Speed Curier",
+    "url": "https://www.logistikspeedcurier.ro/",
+    "logo": "https://www.logistikspeedcurier.ro/images/nealegipenoi.png",
+    "image": "https://www.logistikspeedcurier.ro/images/poza35.jpg",
+    "description": "Service auto complet in Bucuresti Sector 6: mecanica generala, diagnoza computerizata, ITP, tinichigerie, vopsitorie, vulcanizare si tractari.",
+    "telephone": "+40720200300",
+    "email": "contact@logistik.ro",
+    "vatID": "RO21970957",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bd. Timisoara 92",
+      "addressLocality": "Bucuresti",
+      "addressRegion": "Sector 6",
+      "postalCode": "061711",
+      "addressCountry": "RO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.4268,
+      "longitude": 26.0204
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "RON",
+    "paymentAccepted": "Cash, Card",
+    "areaServed": {
+      "@type": "City",
+      "name": "Bucuresti"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicii Service Auto",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Revizie auto si intretinere"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mecanica auto"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diagnoza computerizata"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Statie ITP"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tinichigerie auto"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vopsitorie auto"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vulcanizare si geometrie 3D"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tractari auto"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Aer conditionat auto"}}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -924,7 +157,7 @@ button:hover,
 
           <!-- Banner poza principala (poza35.jpg) -->
           <div class="hero-banner-title">
-            <img src="images/poza35.jpg" alt="Logistik Speed Curier Service Auto" />
+            <img loading="lazy" decoding="async" src="images/poza35.jpg" alt="Service Auto Complet Bucuresti Sector 6 - Logistik Speed Curier" width="1200" height="600" />
           </div>
 
           <!-- Grid: text stanga + imagine dreapta -->
@@ -932,11 +165,11 @@ button:hover,
 
             <!-- Coloana text -->
             <div class="hero-copy reveal visible">
-              <div class="kicker">Service auto &bull; Bucuresti &bull; Sector 6</div>
-              <h1>Masina ta, in maini sigure
-                <span>Programare rapida, lucrari de calitate</span>
+              <div class="kicker">Service Auto &bull; Bucuresti &bull; Sector 6 &bull; Bd. Timisoara 92</div>
+              <h1>Service Auto Complet in Bucuresti, Sector 6
+                <span>Mecanica, ITP, Vopsitorie, Vulcanizare &mdash; Programare Rapida</span>
               </h1>
-              <p>Servicii complete de service auto in Bucuresti: mecanica generala, diagnoza computerizata, tinichigerie si vopsitorie. Echipa cu experienta, preturi corecte si programari rapide prin telefon sau WhatsApp.</p>
+              <p>Service auto complet in Bucuresti, Sector 6 pe Bd. Timisoara 92: mecanica generala, diagnoza computerizata, statie ITP autorizata, tinichigerie si vopsitorie, vulcanizare si geometrie 3D, tractari auto. Echipa cu experienta, piese pe stoc si programari rapide prin telefon sau WhatsApp.</p>
 
               <!-- Butoane actiune -->
               <div class="hero-actions">
@@ -970,7 +203,7 @@ button:hover,
 
         <div class="section-head reveal">
           <div>
-            <h2>Ce putem face pentru ma&#351;ina ta</h2>
+            <h2>Servicii Profesionale Service Auto Bucuresti Sector 6</h2>
           </div>
           <p class="kicker">Piese pe stoc &bull; Lucr&#259;ri uzuale in 2-4 ore</p>
         </div>
@@ -1121,7 +354,7 @@ button:hover,
         <div class="section-head reveal">
           <div>
             <div class="kicker">Galerie</div>
-            <h2>Din atelierul nostru</h2>
+            <h2>Galerie Service Auto Logistik Speed Curier</h2>
           </div>
           <p>Lucrari executate cu atentie la detalii, de la diagnoza si mecanica pana la vopsitorie de calitate.</p>
         </div>
@@ -1308,58 +541,7 @@ button:hover,
 
   </footer>
 
-  <!-- ============================================================
-       JAVASCRIPT
-       1. Hamburger menu toggle pe mobil
-       2. Reveal la scroll (IntersectionObserver)
-       ============================================================ -->
-  <script>
-    document.documentElement.classList.add('js');
-
-    window.addEventListener('DOMContentLoaded', function () {
-
-      /* --- Hamburger menu --- */
-      var menuBtn    = document.getElementById('menuBtn');
-      var mobileMenu = document.getElementById('mobileMenu');
-
-      if (menuBtn && mobileMenu) {
-        /* La click pe hamburger: deschide/inchide meniu */
-        menuBtn.addEventListener('click', function () {
-          mobileMenu.classList.toggle('open');
-          var isOpen = mobileMenu.classList.contains('open');
-          menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-
-        /* Inchide meniu la click pe orice link */
-        document.querySelectorAll('.mobile-menu a').forEach(function (link) {
-          link.addEventListener('click', function () {
-            mobileMenu.classList.remove('open');
-            menuBtn.setAttribute('aria-expanded', 'false');
-          });
-        });
-      }
-
-      /* --- Reveal la scroll --- */
-      var revealItems = document.querySelectorAll('.reveal');
-
-      /* Fallback pentru browsere vechi fara IntersectionObserver */
-      if (!('IntersectionObserver' in window)) {
-        revealItems.forEach(function (el) { el.classList.add('visible'); });
-        return;
-      }
-
-      var observer = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-      revealItems.forEach(function (el) { observer.observe(el); });
-    });
-  </script>
+  <script src="main.js"></script>
   <div class="cookie-box" id="cookieBox" role="dialog" aria-live="polite" aria-label="Setari cookies">
     <strong>Setari cookies</strong>
     <p>Folosim cookies necesare pentru functionarea site-ului. Cookies pentru analiza, marketing sau platforme externe se folosesc doar dupa acordul tau, daca vor fi activate pe site.</p>
@@ -1370,20 +552,7 @@ button:hover,
     </div>
   </div>
 
-  <script>
-    (function(){
-      var box = document.getElementById('cookieBox');
-      if(!box) return;
-      var saved = localStorage.getItem('logistik_cookie_consent');
-      if(!saved) box.classList.add('show');
-      document.querySelectorAll('[data-cookie]').forEach(function(btn){
-        btn.addEventListener('click', function(){
-          localStorage.setItem('logistik_cookie_consent', btn.getAttribute('data-cookie'));
-          box.classList.remove('show');
-        });
-      });
-    })();
-  </script>
+
 
 
 </body>
