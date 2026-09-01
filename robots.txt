@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.logistikspeedcurier.ro/sitemap.xml
+Sitemap: https://www.adicipservice.ro/sitemap.xml
